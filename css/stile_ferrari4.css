@@ -1,68 +1,131 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #222;
     color: white;
     font-family: 'arial', sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
-    margin-right: 2rem;
-    margin-top: 1rem;
-    font-size: 100%;
+    padding: 1rem 2rem;
 }
 
-nav button{
+nav button {
     color: white;
     background-color: transparent;
     border: none;
     font-family: 'Times New Roman', Times, serif;
     cursor: pointer;
+    font-size: 1rem;
 }
 
-header{
+nav button:hover {
+    color: red;
+}
+
+header {
     background-color: rgba(199, 39, 39, 0.555);
-    align-items: center;
     text-align: center;
-    padding: 4rem;
-    margin-top: -2rem;
-
+    padding: 3rem 2rem;
 }
 
-table{
-   margin: 2rem;
-   border-collapse:collapse;
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
-table th, table td{
-    text-align: center;
-    padding: 1rem;
+header p {
+    font-style: italic;
+    font-size: 1rem;
 }
 
-table th{
-    background-color: rgb(199, 165, 54);
-}
-
-table td{
-    background-color: #89aeffc2;
-}
-
-.container{
+.container {
     display: flex;
     gap: 2rem;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    
+    padding: 2rem;
+    flex-wrap: wrap;
 }
 
-.titolo{
-    background-color: rgb(105, 24, 24);
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+}
+
+table th, table td {
+    text-align: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid #444;
+}
+
+table th {
+    background-color: rgb(199, 165, 54);
+    color: #111;
+}
+
+table td {
+    background-color: #89aeffc2;
+    color: #111;
+}
+
+.titolo {
+    background-color: rgb(105, 24, 24) !important;
+    color: white !important;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   RESPONSIVE — sistemato
+   ============================================ */
+@media (max-width: 768px) {
+
+    /* Nav centrato */
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    nav button {
+        font-size: 0.85rem;
+    }
+
+    /* Header più compatto */
+    header {
+        padding: 2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    header p {
+        font-size: 0.85rem;
+    }
+
+    /* Tabelle in colonna */
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    table {
+        width: 95%;
+    }
+
+    table th, table td {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
 }

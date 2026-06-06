@@ -1,172 +1,173 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #222;
     color: white;
     font-family: 'arial', sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
-
-header{
-    background-color: #52010171;
-    align-items: center;
-    padding: 2rem;
-    width: fit-content;
-    border-radius: 12px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 10px #0000005b;
-    border: 1px solid rgba(128, 1, 1, 0.562);
-    margin-top: 2rem;
-    font-size: 120%;
-}
-
-header p{
-    font-style: italic;
-}
-
-
-nav{
+.navi {
     display: flex;
     justify-content: flex-end;
-    gap: 2rem;
-    margin-right: 2rem;
-    margin-top: 1rem;
-    font-size: 100%;
-
-
+    padding: 1rem 2rem;
 }
 
-nav button{
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav button {
     color: white;
     background-color: transparent;
     border: none;
     font-family: 'Times New Roman', Times, serif;
     cursor: pointer;
+    font-size: 1rem;
 }
 
-.wrapper{
+nav button:hover {
+    color: red;
+}
+
+.head {
+    background-color: #52010171;
+    border: 1px solid rgba(128, 1, 1, 0.562);
+    border-radius: 12px;
+    width: fit-content;
+    margin: 1rem auto 1.5rem;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 0 10px #0000005b;
+}
+
+.head header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
+}
+
+.head header p {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 1rem;
-
+    gap: 1.5rem;
+    padding: 0 1.5rem;
 }
 
-
-.container{
-    position: relative;
+.container {
     background-color: rgba(65, 65, 65, 0.842);
     padding: 2rem;
-    padding-top: 1.2rem;
     border-radius: 10px;
-    width: 27%;
-    margin-top: 1.5rem;
+    width: 45%;
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
     box-shadow: 0 0 10px black;
 }
 
-.container h2{
+.container h2 {
     color: rgb(255, 166, 0);
-    font-size: 170%;
-    padding-bottom: 0.5rem;
-    padding-top: 1rem;
+    font-size: 1.3rem;
+}
 
-} 
-
-.container p{
+.container p {
     background-color: #1a1a1a73;
     padding: 1rem;
     border-radius: 10px;
+    line-height: 1.6;
+    font-size: 0.9rem;
 }
 
-.container2{
-    position: relative;
+.container2 {
     background-color: rgba(65, 65, 65, 0.842);
-    width: 27%;
+    width: 30%;
     display: flex;
-    justify-content: flex-end;
     flex-direction: column;
-    margin-top: 4rem;
-    padding: 2rem;
+    gap: 1.5rem;
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0 10px black;
-    padding-bottom: 1rem;
 }
 
-.container2 img{
+.container2 img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-.container2 h4{
+.container2 h4 {
     color: rgb(218, 0, 0);
     font-family: 'Times New Roman', Times, serif;
-    font-size: 150%;
+    font-size: 1.3rem;
     font-weight: 900;
-    padding-top: 0.5rem;
 }
 
-.container2 p{
-    font-size: 80%;
+.container2 p {
+    font-size: 0.8rem;
     background-color: #1a1a1a73;
     padding: 1rem;
     border-radius: 10px;
-    margin-bottom: 1rem;
-    font-weight: 400;
+    line-height: 1.6;
 }
 
-footer{
+footer {
     background-color: #3f3f3fad;
     display: flex;
     justify-content: center;
     margin-top: 2rem;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
-
+/* ============================================
+   RESPONSIVE — sistemato
+   ============================================ */
 @media (max-width: 768px) {
 
-    header{
-        width:80%;
-        font-size: 100%;
-        text-align: center;
-        margin-top: 0;
+    /* Nav centrato su mobile */
+    .navi {
+        justify-content: center;
+        padding: 1rem;
     }
 
-    nav{
-        position: relative;
-        top: -0.5rem;
-        display: flex;
-        justify-content: end;
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
     }
 
-    nav button{
-        font-size: 80%;
+    nav button {
+        font-size: 0.85rem;
     }
 
-    .wrapper{
-        display: flex;
+    /* Titolo più piccolo */
+    .head {
+        width: 85%;
+    }
+
+    .head header h1 {
+        font-size: 1.3rem;
+    }
+
+    /* Wrapper in colonna */
+    .wrapper {
         flex-direction: column;
+        padding: 0 1rem;
     }
 
-    .container{
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
+    .container {
+        width: 100%;
     }
 
-    .container2{
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 1rem;
+    .container2 {
+        width: 100%;
     }
 }
